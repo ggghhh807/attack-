@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شخصيات هجوم العمالقة</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 30px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .character {
+            background-color: #2c3e50;
+            border: 1px solid #34495e;
+            border-radius: 15px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .character:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .character img {
+            width: 100%;
+            border-radius: 10px;
+            border: 3px solid #e74c3c;
+        }
+
+        .character h2 {
+            font-size: 1.5em;
+            margin: 15px 0 10px;
+            color: #e74c3c;
+        }
+
+        .character p {
+            font-size: 1em;
+            color: #bdc3c7;
+        }
+
+        .rating {
+            color: #f1c40f;
+            font-size: 1.5em;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .rating .star {
+            transition: color 0.2s ease;
+        }
+
+        .rating .star:hover {
+            color: #ffcc00;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 15px 0;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        .submit-button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .submit-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* استعلامات الوسائط للهواتف */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .character {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .character h2 {
+                font-size: 1.2em;
+            }
+
+            .character p {
+                font-size: 0.9em;
+            }
+
+            .rating {
+                font-size: 1.2em;
+            }
+
+            .submit-button {
+                width: 100%;
+                padding: 10px;
+                font-size: 1em;
+            }
+        }
+
+        /* استعلامات الوسائط للأجهزة اللوحية */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .character {
+                width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>تقييم شخصيات هجوم العمالقة</h1>
+        <p>هنا يمكنك تقييم الشخصيات المفضلة لديك!</p>
+    </header>
+
+    <main>
+        <!-- إيرين ييغر -->
+        <section class="character">
+            <img src="photoes/1.jpg" alt="إيرين ييغر">
+            <h2>إيرين ييغر</h2>
+            <p>قائد شجاع وملهم، يتمتع بإرادة قوية.</p>
+            <div class="rating" data-rating="5">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- ميكاسا أكرمان -->
+        <section class="character">
+            <img src="photoes/2.jpg" alt="ميكاسا أكرمان">
+            <h2>ميكاسا أكرمان</h2>
+            <p>مقاتلة شرسة ومخلصة، تتمتع بمهارات قتالية فائقة.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- ليفاي أكرمان -->
+        <section class="character">
+            <img src="photoes/3.jpg" alt="ليفاي أكرمان">
+            <h2>ليفاي أكرمان</h2>
+            <p>أقوى جندي بشري، يتمتع ببرودة أعصاب وقوة بدنية.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- أرمن أليرت -->
+        <section class="character">
+            <img src="photoes/4.jpg" alt="أرمن أليرت">
+            <h2>أرمن أليرت</h2>
+            <p>عقلية استراتيجية، يتمتع بذكاء حاد.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- هانجي زوي -->
+        <section class="character">
+            <img src="photoes/5.jpg" alt="هانجي زوي">
+            <h2>هانجي زوي</h2>
+            <p>عالمة شغوفة، تتمتع بحب الاستكشاف والابتكار.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- جان كيرشتاين -->
+        <section class="character">
+            <img src="photoes/6.jpg" alt="جان كيرشتاين">
+            <h2>جان كيرشتاين</h2>
+            <p>جندي واقعي، يتمتع بقيادة طبيعية.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- ساشا بلوز -->
+        <section class="character">
+            <img src="photoes/7.jpg" alt="ساشا بلوز">
+            <h2>ساشا بلوز</h2>
+            <p>فتاة مرحة، تتمتع بحب الطعام والمرح.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- كوني سبرينغر -->
+        <section class="character">
+            <img src="photoes/8.jpg" alt="كوني سبرينغر">
+            <h2>كوني سبرينغر</h2>
+            <p>جندي مخلص، يتمتع بروح الدعابة.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- آني ليونهارت -->
+        <section class="character">
+            <img src="photoes/9.jpg" alt="آني ليونهارت">
+            <h2>آني ليونهارت</h2>
+            <p>مقاتلة هادئة، تتمتع بمهارات قتالية استثنائية.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- رينير براون -->
+        <section class="character">
+            <img src="photoes/10.jpg" alt="رينير براون">
+            <h2>رينير براون</h2>
+            <p>جندي قوي، يتمتع بإرادة صلبة.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- بيرتولت هوفار -->
+        <section class="character">
+            <img src="photoes/11.jpg" alt="بيرتولت هوفار">
+            <h2>بيرتولت هوفار</h2>
+            <p>هادئ الطبع، يتمتع بقوة هائلة.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- زيك ييغر -->
+        <section class="character">
+            <img src="photoes/12.jpg" alt="زيك ييغر">
+            <h2>زيك ييغر</h2>
+            <p>قائد ذكي، يتمتع بخطط استراتيجية.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- بيتر فليجل -->
+        <section class="character">
+            <img src="photoes/13.jpg" alt="بيتر فليجل">
+            <h2>بيتر فليجل</h2>
+            <p>مقاتلة ذكية، تتمتع بسرعة بديهة.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- إيرين كروجر -->
+        <section class="character">
+            <img src="photoes/14.jpg" alt="إيرين كروجر">
+            <h2>إيرين كروجر</h2>
+            <p>مقاتل غامض، يتمتع بإرادة قوية.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- غابي براون -->
+        <section class="character">
+            <img src="photoes/15.jpg" alt="غابي براون">
+            <h2>غابي براون</h2>
+            <p>فتاة خروية كانت السبب في موت ساشاش</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- فالكو غرايس -->
+        <section class="character">
+            <img src="photoes/16.jpg" alt="">
+            <h2>ايارويون سميث</h2>
+            <p>جندي رائع، يتمتع بقلب طيب.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- لوي غاليلارد -->
+        <section class="character">
+            <img src="photoes/17.jpg" alt="لوي غاليلارد">
+            <h2>المعلم شاديس </h2>
+            <p>معلم مخضرم قاد فيلق الاستطلاع سابقا</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- نيكولو -->
+        <section class="character">
+            <img src="photoes/18.jpg" alt="نيكولو">
+            <h2>نيكولو</h2>
+            <p>طاهٍ موهوب، يتمتع بحب كبير للطعام.</p>
+            <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+
+        <!-- أونياكونبون -->
+        <section class="character">
+            <img src="photoes/19.jfif" alt="أونياكونبون">
+            <h2>يومير الفريتز</h2>
+                <p>اول مالكة لقوة العمالقة في العالم</p>          
+  <div class="rating" data-rating="0">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- زر إرسال التقييمات -->
+    <button class="submit-button" onclick="submitRatings()">إرسال التقييمات</button>
+
+    <footer>
+        <p>© 2023 موقع هجوم العمالقة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        // تفعيل تقييم النجوم
+        document.querySelectorAll('.rating').forEach(rating => {
+            const stars = rating.querySelectorAll('.star');
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const value = star.getAttribute('data-value');
+                    rating.setAttribute('data-rating', value);
+                    updateStars(stars, value);
+                });
+            });
+        });
+
+        // تحديث النجوم بناءً على التقييم
+        function updateStars(stars, value) {
+            stars.forEach(star => {
+                if (star.getAttribute('data-value') <= value) {
+                    star.innerHTML = '&#9733;'; // نجمة مملوءة
+                } else {
+                    star.innerHTML = '&#9734;'; // نجمة فارغة
+                }
+            });
+        }
+
+        // وظيفة إرسال التقييمات
+        function submitRatings() {
+            const ratings = [];
+            document.querySelectorAll('.character').forEach(character => {
+                const name = character.querySelector('h2').innerText;
+                const rating = character.querySelector('.rating').getAttribute('data-rating');
+                ratings.push({ name, rating });
+            });
+
+            // يمكنك هنا إرسال التقييمات إلى الخادم أو عرضها في console
+            console.log(ratings);
+            alert('تم إرسال التقييمات بنجاح!');
+        }
+    </script>
+</body>
+</html>

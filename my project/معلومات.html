@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attack - معلومات</title>
+    <style>
+        /* التنسيق العام */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* أقسام الصفحة */
+section {
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الشخصيات */
+.characters-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.character {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin: 10px;
+}
+
+.character img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.character h3 {
+    margin: 10px 0;
+}
+
+/* معرض الصور */
+.gallery-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-grid img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #333;
+    padding: 20px;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer input, footer textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+footer button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #777;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .character, .gallery-grid img {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>هجوم العمالقة</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">عن الأنمي</a></li>
+                <li><a href="#characters">الشخصيات</a></li>
+                <li><a href="#gallery">معرض الصور</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>عن الأنمي</h2>
+        <p>هجوم العمالقة (Shingeki no Kyojin) هو أنمي ياباني من تأليف هاجيمي إيساياما. تدور القصة حول البشر الذين يعيشون داخل أسوار ضخمة لحماية أنفسهم من العمالقة، وهي كائنات عملاقة تأكل البشر دون سبب واضح.</p>
+    </section>
+
+    <section id="characters">
+        <h2>الشخصيات الرئيسية</h2>
+        <div class="characters-grid">
+            <div class="character">
+                <img src='photoes/e62510817eb7e44596862d8837fc3707.jpg' alt="إيرين ييغر">
+                <h3>إيرين ييغر</h3>
+                <p>البطل الرئيسي للقصة، الذي يقسم على القضاء على جميع العمالقة.</p>
+            </div>
+            <div class="character">
+                <img src="photoes/ميكاسا2.jpg" alt="ميكاسا أكرمان">
+                <h3>ميكاسا أكرمان</h3>
+                <p>فتاة قوية وماهرة في القتال، وهي صديقة طفولة إيرين.</p>
+            </div>
+            <div class="character">
+                <img src="photoes/3fe1b6f9f18f0b0f584cdc27b70b450c.jpg" alt="ليفاي أكرمان">
+                <h3>ليفاي أكرمان</h3>
+                <p>أقوى جندي في الجيش وقائد فرقة الاستطلاع.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>معرض الصور</h2>
+        <div class="gallery-grid">
+            <img src="photoes/1111111.jpg" alt="صورة 1">
+            <img src="photoes/22222222.jpg" alt="صورة 2">
+            <img src="photoes/333333.jpg" alt="صورة 3">
+        </div>
+    </section>
+
+
+    <script>// يمكنك إضافة تفاعلية مثل تحريك الصور أو إظهار رسالة عند إرسال النموذج
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('تم إرسال رسالتك بنجاح!');
+        });</script>
+</body>
+</html>

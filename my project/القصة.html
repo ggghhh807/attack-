@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قصة هجوم العمالقة-attack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>/* التنسيق العام */
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        section h2 {
+            color: #ff6f61;
+            border-bottom: 2px solid #ff6f61;
+            padding-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        .character-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .character-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        #back-to-top:hover {
+            background: #ff3b2f;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .zoom {
+            transition: transform 0.3s ease;
+        }
+        
+        .zoom:hover {
+            transform: scale(1.05);
+        }
+        
+        /* التنسيق للهواتف */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        
+            section {
+                padding: 15px;
+            }
+        
+            .character-card {
+                padding: 15px;
+            }
+        
+            header h1 {
+                font-size: 2rem;
+            }
+        }</style>
+</head>
+<body>
+    <header>
+        <h1>قصة هجوم العمالقة</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">مقدمة</a></li>
+                <li><a href="#characters">الشخصيات</a></li>
+                <li><a href="#story">الحبكة</a></li>
+                <li><a href="#themes">المواضيع</a></li>
+                <li><a href="index.html"> الصفحة الرسمية</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro" class="fade-in">
+            <h2>مقدمة</h2>
+            <p>"هجوم العمالقة" (باليابانية: 進撃の巨人، Shingeki no Kyojin) هي سلسلة مانغا يابانية من تأليف ورسم <strong>هاجيمي إيساياما</strong>. تدور القصة في عالم خيالي حيث يعيش البشر داخل مدن محاطة بأسوار ضخمة لحمايتهم من كائنات عملاقة تسمى "العمالقة".</p>
+            <img src="photoes/الاسوار.jpg" alt="صورة توضيحية للأسوار" class="zoom">
+        </section>
+
+        <section id="characters" class="fade-in">
+            <h2>الشخصيات الرئيسية</h2>
+            <div class="character-card">
+                <img src="photoes/70b2577b3d4e3a5bc4014e180ca1a0a9.jpg" alt="إيرين ييغر" class="character-img">
+                <h3>إيرين ييغر</h3>
+                <p>البطل الرئيسي للقصة، يحلم بحرية البشر خارج الأسوار.</p>
+            </div>
+            <div class="character-card">
+                <img src="photoes/ميكاسا.jpg" alt="ميكاسا أكرمان" class="character-img">
+                <h3>ميكاسا أكرمان</h3>
+                <p>فتاة قوية وماهرة في القتال، تحمي إيرين بكل قوتها.</p>
+            </div>
+            <div class="character-card">
+                <img src="photoes/ارمين.jpg" alt="اررمين" class="character-img">
+                <h3>أرمن أليرت</h3>
+                <p>صديق إيرين المقرب، يتمتع بذكاء استراتيجي.</p>
+            </div>
+        </section>
+
+        <section id="story" class="fade-in">
+            <h2>الحبكة الرئيسية</h2>
+            <p>تبدأ القصة باختراق العمالقة للجدار الخارجي، مما يؤدي إلى مقتل العديد من الأشخاص. يقسم إيرين على الانتقام ويقرر الانضمام إلى الجيش لمحاربة العمالقة.</p>
+        </section>
+
+        <section id="themes" class="fade-in">
+            <h2>المواضيع الرئيسية</h2>
+            <ul>
+                <li>الحرية</li>
+                <li>البقاء</li>
+                <li>الأسرار والخيانة</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>تم إنشاء هذه الصفحة بواسطة [محمد سعدي]</p>
+    </footer>
+
+    <button id="back-to-top" title="العودة إلى الأعلى"><i class="fas fa-arrow-up"></i></button>
+
+    <script >// تفعيل تأثيرات التمرير
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".fade-in");
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+        
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        
+            // زر العودة إلى الأعلى
+            const backToTopButton = document.getElementById("back-to-top");
+        
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            });
+        
+            backToTopButton.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });</script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية - Attack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* إعادة ضبط الهوامش والحشوات */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-image: url(photoes/2685ed5678f392079ce95e925096c722.jpg);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* تنسيق القائمة العلوية */
+        .navbar {
+            background: linear-gradient(90deg, #333, #222);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: 0.3s;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .navbar ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #00ff99;
+            bottom: 0;
+            left: 0;
+            transition: 0.3s;
+        }
+
+        .navbar ul li a:hover::after {
+            width: 100%;
+        }
+
+        .navbar ul li a:hover {
+            color: #00ff99;
+        }
+
+        /* تنسيق المحتوى الرئيسي */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* استخدام min-height بدل height */
+            background-image: url('photoes/2685ed5678f392079ce95e925096c722.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 100px 20px 150px; /* هامش علوي وسفلي */
+        }
+
+        .main-content p {
+            font-size: 24px;
+            background: rgba(34, 34, 34, 0.9);
+            color: #00ff99;
+            padding: 30px;
+            border-radius: 15px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تنسيق الفوتر */
+        footer {
+            background: linear-gradient(90deg, #333, #222);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative; /* تغيير من fixed إلى relative */
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        footer h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #00ff99;
+        }
+
+        /* تنسيق الفورم */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #00ff99;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        #contact-form input::placeholder,
+        #contact-form textarea::placeholder {
+            color: #aaa;
+        }
+
+        #contact-form input:focus,
+        #contact-form textarea:focus {
+            border-color: #00cc77;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 255, 153, 0.5);
+        }
+
+        #contact-form textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        #contact-form button {
+            padding: 10px 20px;
+            background-color: #00ff99;
+            color: #1e1e1e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        #contact-form button:hover {
+            background-color: #00cc77;
+            transform: translateY(-2px);
+        }
+
+        footer p {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* تأثيرات إضافية */
+        .navbar, .main-content pre, footer {
+            transition: all 0.3s ease;
+        }
+
+        /* تفاعلية مع JavaScript */
+        .navbar.scrolled {
+            padding: 10px 0;
+            background: rgba(51, 51, 51, 0.9);
+        }
+        
+        /* إخفاء مشغل الصوت */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="#" target="_self">الصفحة الرسمية</a></li>
+            <li><a href="القصة.html" target="_blank">القصة</a></li>
+            <li><a href="تقييم الشخصصيات.html" target="_blank">تقييم الشخصيات</a></li>
+            <li><a href="معلومات.html" target="_blank">معلومات</a></li>
+            <li><a href="انواع العمالقة.html" target="_blank" >انواع العمالقة ومالكيهم</a></li>
+        </ul>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        
+        <p>          ملاحظة:
+
+فليحيى عابد الحرية    
+وايرين عمك وليس ونبيس    </p>
+    </div>
+    <audio src="photoes/التسجيل (3).mp4" controls loop autoplay></audio>
+
+    <!-- الفوتر -->
+    <footer id="contact">
+        <h2>تواصل معنا</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="اسمك" required>
+            <input type="email" placeholder="بريدك الإلكتروني" required>
+            <textarea placeholder="رسالتك" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+        <p>&copy; 2023 Attack. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        // تفاعلية مع JavaScript لإضافة تأثير التمرير
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // تفاعلية عند النقر على الروابط
+        document.querySelectorAll('.navbar ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert(`ستتم إعادة توجيهك إلى: ${this.textContent}`);
+                setTimeout(() => {
+                    window.location.href = this.getAttribute('href');
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
